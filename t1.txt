@@ -1,1 +1,19 @@
+# Proje Tasarımı
 
+## Mimari Yapı
+Proje, MVC (Model-View-Controller) mimarisini kullanmaktadır. Bu, projenin bileşenlerini mantıksal katmanlara ayırır: Model (veri), View (kullanıcı arayüzü) ve Controller (iş mantığı). 
+
+## Bileşenlerin İlişkileri
+- Veritabanı ile uygulama arasındaki iletişim, DAO (Data Access Object) katmanı aracılığıyla gerçekleştirilir.
+- Kullanıcı arayüzü, kontrolcü tarafından işlenen isteklerle etkileşime girer.
+
+## Veri Akışı
+1. Kullanıcı diğer bir kullanıcıya istek gönderir.
+2. Kontrolcü, bu isteği işler ve uygun modeli çağırır.
+3. Model, veritabanından gerekli verileri alır daha sonra da günceller.
+4. En son model kullanıcı arayüzüne gönderilir ve görüntülenir.
+
+## Kullanılan Teknolojiler
+- Frontend: HTML, CSS, JavaScript
+- Backend: Java Spring Framework
+- Veritabanı: PostgreSQL
